@@ -87,11 +87,10 @@ class MainPage(webapp2.RequestHandler):
 
     template = jinja_env.get_template('index.html')
 
-    rendered_html = template % (template values, comments_html, sign_query_params, cgi.escape(wall_name))
+    rendered_html = template % (template_values, comments_html, sign_query_params, cgi.escape(wall_name))
 
-    self.response.out.write(rendered_html)
-    #self.render(templates)
-    #self.response.out.write(template)
+    self.response.out.write(template)
+
 
 class PostWall(webapp2.RequestHandler):
     def post(self):
