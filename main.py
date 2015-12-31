@@ -1,3 +1,4 @@
+import cgi
 import urllib
 import webapp2
 
@@ -68,23 +69,27 @@ class MainPage(webapp2.RequestHandler):
         'url' : url,
         'url_linktext' : url_linktext,
         }
-        return template_values
+#        return template_values
+
 
     # Create our comments html
     comments_html = ''
     for comment in comments:
         if user and user.user_id() == comment.name.identity:
-            posts_html += '<div><h3>(You) ' + comment.name.name + '</h3>\n'
+            comments_html += '<div><h3>(You) ' + comment.name.name + '</h3>\n'
         else:
-            posts_html += '<div><h3>' + comment.name.name + '</h3>\n'
+            comments_html += '<div><h3>' + comment.name.name + '</h3>\n'
 
-        posts_html += 'wrote: <blockquote>' + cgi.escape(comment.content) + '</blockquote>\n'
-        posts_html += '</div>\n'
+        comments_html += 'wrote: <blockquote>' + cgi.escape(comment.content) + '</blockquote>\n'
+        comments_html += '</div>\n'
 
     sign_query_params = urllib.urlencode({'wall_name': wall_name})
 
     template = jinja_env.get_template('index.html')
-    self.response.out.write(template.render(get.template_values))
+
+    rendered_html = template % (template values, comments_html, sign_query_params, cgi.escape(wall_name))
+
+    self.response.out.write(rendered_html)
     #self.render(templates)
     #self.response.out.write(template)
 
@@ -102,7 +107,7 @@ class PostWall(webapp2.RequestHandler):
                 email=users.get_current_user().email())
         else:
             comment.name = Name(
-                name='anonymous@anonymous.com'
+                name='anonymous@anonymous.com',
                 email='anonymous@anonymous.com')
     # Get the content from our request parameters, in this case, the message
     # is in the parameter 'content'
