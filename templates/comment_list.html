@@ -1,0 +1,41 @@
+
+
+<head>
+	<link rel="stylesheet" href="css/main.css">
+	<meta charset="UTF-8">
+<head>
+
+
+	</br>
+	<div class="submission-form" id="submission-form">
+		<form action="/sign" method="post">
+			<h3>Add Notes!  Leave a Comment!<h3>
+			<label for = "name"><b>Name to Display:</b></label>
+			<br>
+
+			<input type="text" placeholder="What is your name?" name="name" value="{{name}}" required></textarea>
+			<br><br>
+			<label for="description"><b>Comment:</b></label>
+			<br>
+
+			<textarea placeholder="Insert your comment/note" name="description" value="{{comment}}" cols="70" rows="3" required></textarea>
+			<br>
+			<br>
+			<input id="leave-comment" class="button button-secondary" type="submit" value="Post Comment">
+			 {% %}
+      			{% if comment.name %}
+        			<b>{{ comment.name }}</b> wrote:
+      			{% else %}
+        			An anonymous person wrote:
+      			{% endif %}
+      			<blockquote>{{ greeting.content|escape }}</blockquote>
+    		{% endfor %}
+
+
+		</form>
+	</div>
+</div>
+
+</br>
+</br>
+

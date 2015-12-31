@@ -1,0 +1,1027 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IntroIntoProgrammingProjectFourSzkolar</title>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawChart);
+      function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+              ['Language', '# of Active Repositories'],
+                ['Javascript', 323938],
+          ['Java',  222852],
+          ['Python', 164852],
+          ['CSS', 164585],
+            ['PHP', 138771],
+            ['Ruby', 132848],
+            ['C++', 86505],
+            ['C', 73075],
+            ['Shell', 65670],
+            ['C#', 56062],
+
+        ]);
+
+        var options = {
+            title: 'Google Charts Javascript Example- GitHub Top 10 Active Repository Language Q4/14',
+            is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<div id = "navigation">
+		<ul>
+			<h3>Teya's Intro Into Programming Notes</h3>
+            <li><a href="#about">About</a></li>
+			<li><a href="#lessonOne">Lesson 1: Introduction and Basics</a></li>
+			<li><a href="#lessonTwo">Lesson 2: The Structure of Documentation in HTML</a></li>
+			<li><a href="#lessonThree">Lesson 3: Cascading Styling Sheets</a></li>
+			<li><a href="#lessonFour">Lesson 4: Introduction to Programming</a></li>
+			<li><a href="#lessonFive">Lesson 5: Variables and Strings</a></li>
+			<li><a href="#lessonSix">Lesson 6: Functions</a></li>
+			<li><a href="#lessonSeven">Lesson 7: If and While Statements</a></li>
+			<li><a href="#lessonEight">Lesson 8: Debugging</a></li>
+			<li><a href="#lessonNine">Lesson 9: List and For Loops</a></li>
+			<li><a href="#lessonTen">Lesson 10: How To Solve Problems</a></li>
+			<li><a href="#lessonEleven">Lesson 11: Introduction into Networks</a></li>
+			<li><a href="#lessonTwelve">Lesson 12: Make the Internet Work for You</a></li>
+			<li><a href="#lessonThirteen">Lesson 13: Forms</a></li>
+			<li><a href="#lessonFourteen">Lesson 14: Python Modulus and Dictionaries</a></li>
+			<li><a href="#lessonFiveteen">Lesson 15: Working with Google App Engine</a></li>
+			<li><a href="#lessonSixteen">Lesson 16: Validation</a></li>
+			<li><a href="#lessonSeventeen">lesson 17: HTML Templates</a></li>
+			<li><a href="#lessonEighteen">Lesson 18: Databases</a></li>
+			<li><a href="#lessonNineteen">Lesson 19: JavaScript</a></li>
+			<li><a href="#lessonTwenty">Lesson 20: API</a></li>
+			<li><a href="#submission-form">Comments-Add to the Notes!</a></li>
+		</ul>
+	</div>
+	<div id = "content">
+
+		<div class= "lesson">
+			<h3 id="about">About</h3>
+            <p> Hello!  My name is Dorotea and these are my notes for the <a href="https://www.udacity.com/course/intro-to-programming-nanodegree--nd000">Introduction to Programing Nano-Degree</a> for Udacity. I've wanted to learn programming for a long time, especially how to build cool websites and applications. Please feel free to use my notes and leave a comment!</p>
+
+
+		</div>
+
+	</br>
+	</br>
+
+		<div class= "lesson">
+			<h3 id="lessonOne">Lesson 1: Introduction and Basics</h3>
+			Hyper Text Markup Language Is The Heart of the Web.  HTTP Consists of:
+              <ul>
+                <li>Text & Content</li>
+                <li>Markup</li>
+                <li>Reference To Other Documents</li>
+                <li>Links to Other Pages = Hyperlinks connect it all</li>
+              </ul>
+            <p>The internet started in the 1990s. The computer makes requests to servers through the internet via HTTP protocol. The Servers then respond to these requests with files that the browser can then interpets and displays. (WIN!)</p>
+
+
+          <p>HTML = Hyper Text Markup Language
+             <ul>
+                <li>Mark up language is used to style text. It is made of tags</li>
+                <li>The whole tag is sometimes referred to as the element.
+                	<ul>
+                 		<li>Elements are created from starting tag to ending tag, with everything in between those tags being the content. </li>
+                  		<li> Each tag has name or type that defines what kind of element will be created (i.e. paragraph, image). Each tag can also have an attribute with value. </li>
+                  		<li>Browsers understand how to display based on classification of tag.</li>
+                	</ul>
+                </li>
+                <li>Some commen tags include:
+                	<ul>
+                  		<li><b>b = bold</b></li>
+                  		<li><em>em = italics</em></li>
+                	</ul>
+                </li>
+                	<li>All Whitespace in html turns into a single space
+                		<ul>
+                			<li>To have multiple lines, can use the br tag </li>
+               			</ul>
+                </li>
+                <li>HTML attributes are equal to a value and consist of contents
+                	<ul>
+                		<li>Tags can have multiple attributes</li>
+                		<li>An example is the anchor tab, a for making links</li>
+                	</ul>
+                </li>
+                	<li>Inline vs Block
+                		<ul>
+                			<li>Span Tag = Inline</li>
+                			<li>Dev Tag = Block</li>
+                			<li>You can name span and dev blocks</li>
+                		</ul>
+                	</li>
+                </li>
+             </ul>
+            </p>
+		</div>
+
+		</br>
+		</br>
+
+		<div class ="lesson">
+			<h3 id="lessonTwo">Lesson 2: The Structure of Documentation in HTML</h3>
+              <p>HTML, CSS and Javascript are the primary languages of web development. To understand how they fit in together, think of a website like house
+                <ul>
+                  <li>HTML is the structure/foundation = it is the rooms</li>
+                  <li>CSS is the style = The paint and decoration on the rooms of the walls</li>
+                  <li>Javascript is the interactive components = The moving garage door</li>
+                </ul>
+               </p>
+
+          <p>HTML Document Structure
+              <ul>
+                <li> HTML docs follow a tree like structure. In other words, when programmers talk about the "DOM" (Document Object Model) they are referring to the tree-like structure of a page</li>
+                <li> Because HTML documents follow set syntax and DOM, browsers have set way to interact and display elements</li>
+                <li>HTML docs consist of
+                  <ul>
+                    <li> Consists of !Doctype tag</li>
+                    <li> Opening html tag</li>
+                    <li> Head tag for metadata, javascript, css, title, etc.</li>
+                    <li> Body tag for contents of the document</li>
+                  </ul>
+                </li>
+              </ul>
+            </p>
+          <p>Boxes are Everywhere on the Internet!
+              <ul>
+                <li>All elements on web pages are organized into boxes</li>
+                <li>When programming websites, think of its organization in terms of boxes = start from the biggest box and work to the smallest boxes</li>
+                <li>Div and Span
+                    <ul>
+                      <li>Define individual boxes using the div tag</li>
+                      <li>Give each element class attribute to mark for styling. HTML tags can also have several classes</li>
+                      <li>Good idea to have class names that make sense. That way you understand it’s purpose in code </li>
+                    </ul>
+                  </li>
+                <li>To write code, programmers use use special text editors (like Sublime Text for example)</li>
+              </ul>
+            </p>
+
+		</div>
+
+	</br>
+	</br>
+
+		<div class ="lesson">
+			<h3 id="lessonThree">Lesson 3: Cascading Styling Sheets</h3>
+              <p>Utilize CSS to style the pages of websites
+              	<ul>
+          			<li>Using CSS avoids unnecessary repetition of style coding in HTML</li>
+          			<li>CSS follows the rule of inheritance.  Wikipedia defines inheritance as <em>"the mechanism by which properties are applied not only to a specified element, but also to its descendants.  Inheritance relies on the document tree, which is the hierarchy of (X)HTML elements in a page based on nesting.”</em>  You can read the full entry <a href = "https://en.wikipedia.org/wiki/Cascading_Style_Sheets#Inheritance" target="_blank">here.</a>  What this means is that any elements within the effected element will also inherit that CSS style! </li>
+        			<li>	Link to CSS style sheets in the header tag of html document</li>
+         			<li>	Programmers can either apply styles to elements and classes.  In either case, it is written in the format attribute: value;</li>
+          			<li>CSS has a lot of functionality!  For common attributes, reference this <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">CSS documentation</a></li>
+         			<li>	Class vs ID
+            			<ul>
+             				<li>Class: Utilize when have a group of elements which you want to style together. Class names should not contain periods or any other punctuation marks</li>
+              				<li>ID: ID's are unique identifiers to identify an individual element in HTML</li>
+            			</ul>
+          			</li>
+        		</ul>
+              </p>
+
+		</div>
+
+	</br>
+	</br>
+
+		<div class= "lesson">
+			<h3 id="lessonFour">Lesson 4: Introduction to Programming</h3>
+				<p>Programming is the Core of Computer Science
+					<ul>
+         	 			<li>A computer program is a precise set of instructions which tells a computer what to do.</li>
+          				<li>A computer is a universal machine and can be programmed to essentially do any computation we can imagine!  More so, the advantage of a computer is that it can execute steps really fast.</li>
+          				<li>  Computer languages follow strict grammar:
+            				<ul>
+              					<li>Must precisely describe to computer steps to do</li>
+              					<li>Computer interprets literally the same way every time(needs to follow exact language rules or else get error). </li>
+            				</ul>
+          				</li>
+          				<li>Python is an interpreter = interprets the language python.</li>
+        			</ul>
+				</p>
+		</div>
+
+		</br>
+		</br>
+
+		<div class= "lesson">
+			<h3 id="lessonFive">Lesson 5: Variables and Strings</h3>
+				<p>Variables are Used to Store Values
+					<ul>
+          				<li>Use assignment statement to both declare and give value to a variable.</li>
+          				<li>Follows the structure name = expression.</li>
+          				<li>Format should consist of text and underscore, i.e.  speed_of_light = 299792458</li>
+          				<li>The advantages of variables are they can be used directly in place of long complex numbers and functions!
+            				<ul>
+              					<li>Variables can vary = once we define a variable, we can change the value of that variable.  From then on, when we use the variable, the code will use the new assigned value. </li>
+              					<li>This is quite useful because it not only provides a way to store the value of important data, but also a way to change the value of something!</li>
+            				</ul>
+          				</li>
+        			</ul>
+				</p>
+
+				<p>Strings are Used to Store Characters
+            		<ul>
+              			<li>Follows the structure string =  sequence of characters surrounded by quotes </li>
+              			<li>Indexing Strings allows an extraction of subsequences from the string:
+                			<ul>
+                  				<li>Use [] to extract a specific position from the string</li>
+                  				<li>Select subsequences from Strings by using [expression start number: stop expression number] = this selects string that is a subsequence of continuous characters from the starting to the end position</li>
+                			</ul>
+              			</li>
+            		</ul>
+            	</p>
+		</div>
+
+
+		</br>
+		</br>
+
+		<div class= "lesson">
+			<h3 id="lessonSix">Lesson 6: Functions</h3>
+				<p>Functions Take Input to do an Action
+        			<ul>
+          				<li>Function are defined by taking inputs and passing them through  an operand/argument to return an output/result.</li>
+          				<li>Defining and then using functions makes up the majority of programming </li>
+          				<li>Once the function is defined, can call and continuously pass arguments through! </li>
+          				<li>A function may not have an output (i.e. can simply assign a value).  In python, must use a return statement in order to have output and use print command to show results.</li>
+        			</ul>
+     			</p>
+
+     			<p>Advantages of Functions
+          			<ul>
+            			<li>Functions allow programmers to reuse code without having to write it multiple times (just write once and run inputs through!)</li>
+            			<li>Procedure Composition – programmers compose little/simple procedures and then use the outputs for the next procedure. Thus  build simple procedures build upon one another to get complex work done.</li>
+            			<li>Allows programmers to test easier - by building small functions to do complex work, we can more easily test small parts of the program.</li>
+          			</ul>
+          		</p>
+		</div>
+
+    </br>
+		</br>
+
+		<div class= "lesson">
+			<h3 id="lessonSeven">Lesson 7: If & While Statements</h3>
+            <p>Make Code Behave and Output Differently Based on Decisions
+                <ul>
+                    <li>Python provides operators for making comparisons.</li>
+                    <li>The output of a comparison is a Boolean value of True or False.</li>
+                    <li>Examples of comparisons include:
+                        <ul>
+                            <li><</li>
+                            <li>></li>
+                            <li>== <i>(A single equal signs means assignment, therefore have to use == for an equality comparison).</i></li>
+                            <li>!=</li>
+                        </ul>
+                    </li>
+                </ul>
+            </p>
+
+            <p>
+                If Statements
+                    <ul>
+                        <li>Use if statements with comparisons to then have code do an action based on decisions.</li>
+                        <li>If statement structure is as follows:</br><p>If comparison test expression:</p><p style="text-indent: 3em;">Code that                           will run if test is true.</p></li>
+                        <li>Use indentation to show where code running ends.  Python is an indent sensitive language.</li>
+                        <li>OR compare operator evaluates the logical OR of the two operands (i.e. True or False).</li>
+                        <li>With OR comparisons, if the first expression evaluates to True, the value is then True and thus any second expression                           is not evaluated.</li>
+                        <li>In theory, can use arithmetic comparisons functions to do write every possible computer program.  But this is not                              the most efficient way to do it.</li>
+                    </ul>
+            </p>
+
+            <p>
+            While Loops
+             <ul>
+              <li>Very similar to if statement, except the test statement only executes depending if the statement is true.</li>
+              <li>While loops can run the test expression multiple times, as long as the evaluations statement is true.</li>
+             </ul>
+            </p>
+		</div>
+
+		</br>
+		</br>
+
+
+		<div class= "lesson">
+			<h3 id="lessonEight">Lesson 8: Debugging</h3>
+                <ul>
+                    <li>Debugging  is a development strategy for systemically finding and fixing errors in code.</li>
+                    <li>When trying to use example code as base for your code, comment out the code.  Then change the parts where you want your                         code to behave differently.
+                        <ul>
+                        <li>Make sure example code works well, otherwise your code will inherit the example code’s bugs.</li>
+                        <li>If get frustrated, instead of throwing away first try at code in, just comment it out!  That way, can return it if a                           later version is not as good as first try.</li>
+                        <li>Save versions, so you can show the different versions if you need to ask for help.</li>
+                        </ul>
+                    </li>
+                </ul>
+		</div>
+
+</br>
+</br>
+
+		<div class= "lesson">
+			<h3 id="lessonNine">Lesson 9: List & For Loops</h3>
+                 <p>Structured Data & Lists</h3>
+                    <ul>
+                        <li>A String is structured data = a sequence of characters.</li>
+                        <li>List is a sequence of data types which can be anything (more powerful then string).
+                            <ul>
+                                <li>Example of List p = [‘Y’, ‘A’, ‘B’]</li>
+                            </ul>
+                        </li>
+                        <li>To index a list, also use [] square brackets.</li>
+                        <li>Can make lists inside lists, thus Nested Lists! </li>
+                        <li>Lists are versatile and can also consist of different element types.  Thus, list can have combination of strings,                               numbers and other lists.</li>
+                        <li>Can use index to get the position of a list within a list; use multiple brackets. [][]</li>
+                    </ul>
+                </p>
+
+                <p>Lists, Unlike Strings, Support Mutation and Aliasing
+                    <ul>
+                        <li>Mutation allows programmer to change value of list after it is created.
+                            <ul>
+                                <li>Mutation modifies the value of the elements of the list (replace the value).
+                                    <ul>
+                                        <li>P[0] = ‘Y’</li>
+                                        <li>Replaces/assigns first value of p list to being value of ‘y’</li>
+                                    </ul>
+                                </li>
+                                <li>When mutating, must be considerate of all other values it effects in code!</li>
+                            </ul>
+                        </li>
+                        <li>Aliasing allows referrence to the same object in two different ways</li>
+                        <li>Lists are very powerful = they can contain other lists or any other data we want, allowing us to build very complex                             data structures to do lots of interesting things!  Other list operations include:
+                            <ul>
+                                <li>Append = append a new element to the end of the lists.  Thus can add a new list to the end of a list.</li>
+                                <li>Plus = adds two lists together to produces a new list.</li>
+                                <li>Len = length operator and lets us know the length, or number of elements in list</li>
+                                <li>For loop allows you to run a piece of code and repeat n number of times as opposed to a while loop</li>
+                                <li>Index method allows to find value in list. If index does not find value, returns an error.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </p>
+		</div>
+
+</br>
+</br>
+
+		<div class= "lesson">
+			<h3 id="lessonTen">Lesson 10: How To Solve Problems</h3>
+                <ul>
+                    <li>All computational problems consist of inputs and outputs.  Therefore, a problem is defined by possible inputs and                               relationship between those inputs to outputs.</li>
+                    <li>A solution is a procedure that can take any possible inputs and out desired results.</li>
+                    <li>First thing first, figure out what are the inputs!  Then you need to decide how to code the inputs/how they will be                             represented.</li>
+                    <li>Next, understand what needs to be outputted.</li>
+                    <li>Finally solve problem by mapping inputs to the correct outputs and understand the relationship = work out with test                             examples.</li>
+                    <li>Gradually work out how to do it with examples, write algorithm that systematizes the steps and that the ideas makes sense                       = “pseudo code”.</li>
+                    <li>Finally develop incrementally and test as we go!</li>
+                </ul>
+
+                <p>In Summary, The Five Steps to Follow Are:
+                    <ol>
+                        <li>Don't Panic!</li>
+                        <li>What Are The Inputs?</li>
+                        <li>What Are The Outputs?</li>
+                        <li>Work through some examples by hand.</li>
+                        <li>Simple Mechanical Solution.</li>
+                        <li>Develop Incrementally and Test As Go</li>
+                    </ol>
+                </p>
+        </div>
+
+</br>
+</br>
+
+		<div class ="lesson">
+			<h3 id="lessonEleven">Lesson 11: Introduction into Networks</h3>
+				<p>A network is a group of entities (can be group of people, organizations, etc.) that can communicate, even though they are not                all directly connected. The internet is just a special kind of network.  Networks allow for non-direct communication (must be at                   least three entities).</p>
+
+				<p><u>What does it take to make a network?</u>
+					<ul>
+						<li>A way to encode messages = be able to convert and interpret the message we want to send. </li>
+						<li>Way to route = need to figure out where to send the message and thus what nodes it needs to travel along.</li>
+						<li>Rules to decide who gets to use the network and what information can be sent</li>
+					</ul>
+				</p>
+
+				<p><u>Two ways to measure a network:</u>
+					<ul>
+						<li>Latency = time it takes to get from the source to destination.  Measured in a unit of time such as milliseconds</li>
+						<li>Bandwidth = the amount of information that can be transmitted per unit of time. (The rate you can send information over.  For the internet, it is often measured in megabits per second)</li>
+						<li>You can measure your bandwidth with online tools. In internet, there are no formal rules for who gets priority to use resource = internet is best effort service</li>
+					</ul>
+				</p>
+
+				<p><u>What is a bit?</u>
+					<ul>
+						<li>Smallest unit of information that can be transferred</li>
+						<li>Bits is a yes/no or 1/0 decision to measure information to questions</li>
+						<li>Can encode any number of things in bits</li>
+					</ul>
+				</p>
+
+				<p><u>Protocol: </u>
+					<ul>
+						<li>Protocol is a set of rules for how to entities can talk to each other. For the internet, it is rules for how client (web browser) and server can talk to each other.</li>
+						<li>Web Protocol is Hypertext Transfer Protocol (that is why almost all browsers start with HTTP!)</li>
+						<li>HTTP can send message GET (clients sends GET message to server to get a file/object and the server sends back a response which is the contents of the requested object)</li>
+					</ul>
+				</p>
+		</div>
+
+		</br>
+		</br>
+
+		<div = class ="lesson">
+			<h3 id="lessonTwelve">Lesson 12: Make the Internet Work for You</h3>
+					<u>HTML documents structure:</u>
+						<ul>
+							<li>Doctype on top</li>
+							<li>HTML tag</li>
+							<li>Head tag for metadata and to references to things like stylesheets and title of the page</li>
+							<li>Body tag for the contents of the document</li>
+						</ul>
+
+
+					<p><u>URLs:</u>
+						<ul>
+							<li>URL = Uniform Resource Locator</li>
+							<li>HTTP is the protocol portion</li>
+							<li>Host is the network address like www.udacity.com The path to the document to fetch follows the address</li>
+							<li>Query Parameter also known as GET parameter</li>
+							<li>A cache (pronounced like cash) is something that stores data so that you don't have to retrieve it later. It can be used to make data requests faster. </li>
+							<li>Fragment is separated from the rest of the url by #
+								<ul>
+									<li>generally used to reference a particular part of the page looking at </li>
+									<li>fragment is not sent to server(it purely exists in the browser)</li>
+								</ul>
+							</li>
+							<li>Port= in order to make an internet connection or request across the web, you need a port or an endpoint for the communication.</li>
+						</ul>
+					</p>
+
+					<p>The request by the browser begins with a request line that looks something like GET/foo. A text line request has three main parts:
+						<ul>
+							<li>Method or the request making to server.  The most common is get and post</li>
+							<li>Path = actual document we are requesting</li>
+							<li>Version</li>
+						</ul>
+					</p>
+
+					<p>Request lines are followed by a number of headers.  Popular ones include HOST and User-Agent (generally the browser and version)
+						<ul>
+							<li>User Agents is one of the most important headers; writing good and accurate user agents is courteous thing to do on the web</li>
+						</ul>
+					</p>
+
+					<p><u>HTTP Responses:</u>
+						<ul>
+							<li>Response looks similar to the request. Status line is the status code and then the reason phrase. Status codes examples are:
+								<ul>
+									<li>200 = ok</li>
+									<li>302 = found, means documented located somewhere else</li>
+									<li>404 = document not found, means errors on browser side in finding doc</li>
+									<li>500 = server broke in handling your request (error on server side)</li>
+								</ul>
+							</li>
+							<li>Status line is followed by a number of headers. Examples include date, server content-type,and content-length.</li>
+						</ul>
+					</p>
+
+					<p>
+						<u>Servers:</u>
+							<ul>
+								<li>Purpose of a server is to respond to HTTP requests</li>
+								<li>Two main types of response
+									<ul>
+										<li>Static: pre-written file such as an image</li>
+										<li>Dynamic: response is built on the fly by programs called web application</li>
+									</ul>
+								</li>
+							</ul>
+
+					</p>
+		</div>
+
+		</br>
+		</br>
+
+		<div class="lesson">
+			<h3 id="lessonThirteen">Lesson 13: Forms</h3>
+			A form is a way to get the user to input data into the web browser which can be then sent to a server.  Use the form tag element to create: &lt;form&gt;.
+
+			<p>
+				<u>Input Element:</u>
+					<ul>
+						<li>To capture the information in the form, use the element &lt;input&gt; in the form. </li>
+						<li>The input tag can take in attributes</li>
+						<li>For example &lt;input name="name"&gt; and thus name gets the value submitted in the input box in the browser.</li>
+					</ul>
+			</p>
+
+			<p>
+				<u>Attribute Types:</u>
+					<ul>
+						<li>Attribute type submit = &lt;input type = "submit"&gt;.  Provides a button to submit the input form.</li>
+						<li>Attribute action controls where a form submit to.  For example, &lt;form action=url where we want form to be submitted to&gt;</li>
+						<li>Attribute type = password. Makes the input appear as dots instead of text.  However this doesn’t hide it in the browser.  Thus should use password type when collecting password, but know it is not sent securely to the server</li>
+					</ul>
+			</p>
+
+			<p>
+				<u>Checkbox Type:</u>
+					<ul>
+						<li>&lt;Input type = "check box" name="q"&gt; creates a checkbox called q.</li>
+						<li>Used for creating a toggle on or off </li>
+						<li>When checked, it is on for the value.  If not checked off, no parameter appears in the browser.</li>
+					</ul>
+			</p>
+
+			<p>
+				<u>Radio Buttons:</u>
+					<ul>
+						<li>Radio buttons is another form element. </li>
+						<li>Example = &lt;input type=:radio" name="q" value="value"&gt; </li>
+						<li>To have only one radio button be able to be selected, give them all the same name  </li>
+						<li>Value is what checked off radio button or name is assigned, thus in the above example the q=value appears in the url</li>
+					</ul>
+			</p>
+
+			<p>
+				<u>Drop Down:</u>
+					<ul>
+						<li>Drop down element = &lt;select name="q"&gt; followed by option elements of what user is be able to select in the dropdown.  For example, &lt;option&gt;option one&lt;/option&gt;</li>
+						<li>Can also add value to options, thus &lt;option value ="1"&gt;One&lt;/option&gt; and thus value is the numeric digit 1</li>
+					</ul>
+			</p>
+		</div>
+
+		</br>
+		</br>
+
+		<div class="lesson">
+			<h3 id="lessonFourteen">Lesson 14: Python Modulus and Dictionaries</h3>
+				<u>Modulus:</u>
+					<ul>
+						<li>Modulus operators used to get outputs in the correct range</li>
+						<li>Written with the % sign</li>
+						<li>Modulus takes a number and maps it to the range based on the remainder when you divide that number </li>
+					</ul>
+
+				<p>
+					<u>Dictionary Type:</u>
+						<ul>
+							<li>Create using curly bracket {}</li>
+							<li>Entries inside dictionary are key value pairs.  Keys can be any immutable values (so can be strings, numbers)</li>
+							<li>Set of &lt;Key, Value&gt; pairs</li>
+							<li>Dictionaries are mutable, which means can modify key and value pairs</li>
+						</ul>
+
+				</p>
+		</div>
+
+		</br>
+		</br>
+
+		<div class="lesson">
+			<h3 id = "lessonFiveteen">Lesson 15: Working with Google App Engine</h3>
+
+				According the <a href="https://cloud.google.com/appengine/docs/whatisgoogleappengine" target="_blank">documentation</a>: "Google App Engine is a Platform as a Service (PaaS) offering that lets you build and run applications on Google's infrastructure."
+
+				<p>To download google app go <a href="https://cloud.google.com/appengine/download" target="_blank">here.</a></p>
+
+				<p>Difference between GET and POST requests via the app engine:
+					<ul>
+						<li>GET:
+							<ul>
+								<li>Parameters are in URL</li>
+								<li>Used for fetching documents</li>
+								<li>Maximum URL length</li>
+								<li>Ok to cache</li>
+								<li>Should not be able change the server</li>
+							</ul>
+						</li>
+						<li>POST:
+							<ul>
+								<li>Parameters in body</li>
+								<li>Used for updating data</li>
+								<li>No max length</li>
+								<li>Not ok to cache</li>
+								<li>Can make changes the server</li>
+							</ul>
+						</li>
+					</ul>
+				</p>
+
+				<p>Use buttons instead of links for things like delete.  That way, won’t have a bot come through and click when indexing!</p>
+		</div>
+
+		</br>
+		</br>
+
+		<div class="lesson">
+			<h3 id = "lessonSixteen">Lesson 16: Validation</h3>
+
+				Validation is verifying on the server side that what is received is what we expected/wanted to receive.  Validation protects from users sending to the server arbitrary junk and to make sure our servers handle it safely.
+
+				<p>
+					<ul>
+						<li>Can validate by capitalizing months or value, and then confirm if it is in the validation list or dictionary.</li>
+						<li>Can check if something is a digit using .isdigit() function in order to make sure is an integer</li>
+						<li>Can convert an integer into a year = int(year)</li>
+					</ul>
+				</p>
+
+				<p>
+					<u>How does it work? Via the browser:</u>
+						<ol>
+							<li>User sends GET request to the server</li>
+							<li>The server responds with the form.</li>
+							<li>Then the user makes a POST request to the server when submit the information in inputted in the form.  </li>
+							<li>Then the server runs the validation function and does one of two things: if the data is good, the server will take the data (and maybe have a thank you message).  If bad, the server should not take the data and respond with error message.</li>
+						</ol>
+				</p>
+
+				<p>
+					<u>String Substitution:</u>
+						<ul>
+							<li>%s variable = substitute the contents of the variable for %s thus don't have to keep on writing code</li>
+							<li>To substitute multiple strings, can include multiple %s in variable</li>
+							<li>Can also include %(name)s and have name map to a value in a dictionary</li>
+						</ul>
+				</p>
+
+				<p>Can attach value attribute value to input field. This causes the text box when we render it to have a default value.  Thus, can render it with the value the user just filled in or have default values already filled in!</p>
+
+				<p><u>Escaping:</u>
+					<ul>
+						<li>Can represent or use escape to show special characters</li>
+						<li>Use this in order to avoid broken text in the browser</li>
+					</ul>
+				</p>
+		</div>
+
+		</br>
+		</br>
+
+		<div class="lesson">
+			<h3 id = "lessonSeventeen">Lesson 17: HTML Templates</h3>
+				<ul>
+					<li>Can use &lt;input type=Hidden&gt; so can include more information than what the user just inputs, (and don't want the user to see).</li>
+					<li>.get_all in app engine means get all the parameters and put them in a list</li>
+					<li>Template library is a library to build complicated strings.  Example is jinja2</li>
+				</ul>
+
+				<p>Libraries Make Code Easier:
+					<ul>
+						<li>If want to include external libraries in google  engine, need to insert libraries in code = import statement to import jinja2 in python code.</li>
+						<li>Must follow the library syntax to successfully run</li>
+						<li>Variable Substitution = can substitute variables in libraries</li>
+					</ul>
+				</p>
+
+				<p>Helpful Tips:
+					<ul>
+						<li>Always set escaping to automatic to avoid allowing raw HTML inputted to mess up the site.  Can then opt in to do safe in areas when you do want HTML to display on purpose.</li>
+						<li>Minimize code in templates; Minimize HTML code</li>
+					</ul>
+				</p>
+
+				<p>Templates Great Way To Keep HTML Separate From Python:
+					<ul>
+						<li>Template inheritance lets you define a base template which can later plug new HTML into.  Makes for more reliable code.</li>
+						<li>Make more secure websites</li>
+						<li>HTML is easier to modify when use a template</li>
+						<li>For repeated elements, can use a Loop</li>
+					<ul>
+				</p>
+
+		</div>
+
+		</br>
+		</br>
+
+		<div class="lesson">
+			<h3 id = "lessonEighteen">Lesson 18: Databases</h3>
+				<u>What is a Database?</u>
+					<ul>
+						<li>A database is a program that stores and retrieves large amounts of structured data.</li>
+						<li>Database can refer to the program that is storing and retrieving the data, the machine that is running the program, or it can refer to a system of machines running the program operating together.</li>
+						<li>Request to the servers to get information from the database can come from users through the internet.</li>
+						<li>Tables: columns of database make up a type; every entry in table is a row = columns go down, rows go across.</li>
+						<li>Generally every row will have an ID; very important because how refer to that row/information specifically.</li>
+						<li>Should not query database by hand: error prone, tedious, and slow.</li>
+						<li>Databases exist to take big chunks of data and answer queries on them in a reasonable amount of time without having to write a lot of custom code.</li>
+					</ul>
+
+					<p><u>Types of Databases:</u>
+						<ul>
+							<li>Relational database with SQL</li>
+							<li>Google App Engine Database</li>
+							<li>Amazon Dynamo</li>
+							<li>No SQL databases</li>
+						</ul>
+					</p>
+
+					<p><u>SQL:</u>
+						<ul>
+							<li>SQL= Structured Query Language = language for expressing queries; used to put data in database and then retrieving the data.</li>
+							<li>SQL was invented in the 1970s</li>
+							<li>Select is how pull/ get the data</li>
+							<li>Where clause is not required (use when want to put in constraints on the data retrieved)</li>
+						</ul>
+					</p>
+
+					<p><u>Joins:</u>
+						<ul>
+							<li>SQL type of query that uses two tables = can run query for parameters on multiples tables</li>
+							<li>Sequential scan = use loop to go through list and get an answer, but can be slow when there is a lot of data.</li></li>
+							<li>Can use an index to increase the speed of queries, allows for fast look of in code (like a python dictionary) because don’t have to go through every element.</li>
+							<li>Indexes can be used for sorting- tree data structures already have the information sorted (unlike hash tables). As a result look ups are slower and dependent on the number of elements of tree.</li>
+							<li>Hash tables are not sorted and have a constant look up time.</li>
+						</ul>
+					</p>
+
+					<p><u>ACID = Atomicity Consistency Isolation Durability</u>
+						<ul>
+							<li>Atomicity = all parts of a transaction succeed or fail together (don't just do part of it, happens together).</li>
+							<li>Consistency = the database will always be consistent</li>
+							<li>Isolation = no transaction can interfere with another</li>
+							<li>Durability = once a transaction is committed, it won’t be lost</li>
+						</ul>
+					</p>
+		</div>
+
+		</br>
+		</br>
+
+		<div class="lesson">
+			<h3 id = "lessonNineteen">Lesson 19: JavaScript</h3>
+				JavaScript allows us to save data in the form of variables:
+					<ul>
+						<li>Declare variables using Var</li>
+						<li>Follows syntax var&#123; &#123;variableName&#125; &#125; = &#123; &#123;someValue&#125; &#125;</li>
+						<li>Arrays, functions and objects use the same var syntax</li>
+					</ul>
+
+				<p>
+					Replace function can replace parts of variable to create new variable
+					<ul>
+						<li>Utilized in HTML templates</li>
+						<li>Var formattedName = HTMLheaderName.replace</li>
+					</ul>
+				</p>
+
+				<p>
+
+
+				<p>JavaScript has a set of values that evaluate to true or false, but may not equal to true or false:
+					<ul>
+						<li>http://opensourcehacker.com/2012/10/17/true-lies-and-falsy-values-in-python-and-javascript/</li>
+						<li>Difference between JavaScript objects and python dictionaries = http://stackoverflow.com/questions/20987485/python-dictionaries-vs-javascript-objects</li>
+					</ul>
+				</p>
+
+				<p>There are no classes in JavaScript, just objects
+					<ul>
+						<li>Objects can hold information and do things</li>
+						<li>Can manipulate objects using object literal notation thus:
+						</br>
+						Var bio = &#123;</br>
+						“name”: “james”,</br>
+						“age”; 32,</br>
+						&#125;;
+						</li>
+					</ul>
+				</p>
+
+				<p>JSON is JavaScript Object Notation
+					<ul>
+						<li>JSON is a popular and simple format for storing and transferring nested or hierarchal data.</li>
+						<li>Lint your JSON to save time = Lint is software finds syntax errors in code</li>
+					</ul>
+				</p>
+<p><b>Additional Exploration Into Javascript:</b>
+</br>
+                    </br>
+                        <a href="http://www.sitepoint.com/15-best-javascript-charting-libraries/">16 JavaScript Libraries for Creating Beautiful                            Charts</a>
+                    </br>
+                by Syed Fazle Rahman
+                        <ol>
+                            <li>D3.js — Data-Driven Documents</li>
+                            <li>GoogleCharts- example below</li>
+                            <li>Chart.js- simple, clean and engaging charts for designers and developers</li>
+                            <li>Chartist.js-responsive charts</li>
+                            <li>n3-charts-versatile charts for angular.js</li>
+                            <li>Ember Charts- OPen source easily customisable charts</li>
+                            <li>Smoothie Charts- stream real-time data</li>
+                            <li>Chartkick- JavaScript charting library for Ruby Applications</li>
+                            <li>Zingchart- flexible, interactive, fast, scalable and modern product for creating charts quickly</li>
+                            <li>Highcharts JS- advantage is compatible with older browsers</li>
+                            <li>Fusioncharts- unlike many libraries, provides data parsing through both JSON and XML</li>
+                            <li>Flot- JavaScript charting library for jQuery. It is also one of the oldest and popular charting libraries.</li>
+                            <li>amCharts- beautiful charting library and one of the author’s favorites</li>
+                            <li>EJS Chart- Enterprise charting library</li>
+                            <li>uvCharts-100+ customization options.</li>
+                            <li>Plotly.js- scientific Javascript charting library and open source</li>
+                        </ol>
+                </p>
+
+<a href="https://developers.google.com/chart/interactive/docs/quick_start"><div align="center"><div id="piechart_3d" style="width: 500px; height: 300px;"></div></div></a>
+
+		</div>
+
+		</br>
+		</br>
+
+		<div class="lesson">
+			<h3 id = "lessonTwenty">Lesson 20: API</h3>
+				API stands for Application Programming Interface
+					<ul>
+						<li>APIs allows different site servers to talk to teach other through HTTP client and other protocols.</li>
+						<li>Using APIs, can take data from other sites in formats like XML, manipulate it and post it on your own site.  This is how a lot of the internet works.</li>
+					</ul>
+				<p>HTML is not ideal language for computers to communicate to one another
+					<ul>
+						<li>Difficult to parse especially if you forget to do closing tags and is error prone</li>
+						<li>HTML has void tags like &lt;br&gt; while XML does not</li>
+					</ul>
+				</p>
+				<p>XML
+					<ul>
+						<li>Easier to parse the HTML </li>
+						<li>In HTML every element needs to have a closing tag while XML does not</li>
+						<li>In XML can make own tags</li>
+						<li>XML and HTML share a common lineage and thus why look similar</li>
+						<li>HTML can be expressed as XML</li>
+					</ul>
+				</p>
+				<p>JSON
+					<ul>
+						<li>Structured consistent way to send/organize data in JavaScript and thus similar to XML</li>
+						<li>JSON is included in python 2.6 and newer </li>
+						<li>May use JSON to parse JavaScript and link at dictionaries and values</li>
+						<li>Never use eval command in python to parse JSON because there could be code that may make a mess of your computer! </li>
+						<li>Need convert document into JSON in order to parse in python using the load function in the JSON module</li>
+					</ul>
+				</p>
+				<p>How to be a good citizen
+					<ul>
+						<li>If access information via API use a good user agent that specifies who you are</li>
+						<li>Rate-limit yourself so don’t over hit their servers with requests i.e.  Use a sleep function that pauses between request</li>
+						<li>Public API directory = https://www.publicapis.com/</li>
+					</ul>
+				</p>
+				<b><p>Additional Resources and Exploration into APIs:</b>
+				</br></br>
+					<b>1. Rest API Concepts and Examples by Webconcepts</b>
+					<div align="center"><iframe width="500" height="300" src="https://www.youtube.com/embed/7YcW25PHnAA" frameborder="0" allowfullscreen></iframe></div>
+					<p>REST API
+						<ul>
+							<li>While there many different types of APIs, most of the time people are referring to a REST API</li>
+							<li>REST stands for REpresentational State Transfer</li>
+							<li>Usually a REST API works like a website- the client makes a request to the server via HTTP protocol</li>
+						</ul>
+					</p>
+					<p>API similar to excel
+						<ul>
+							<li>In excel, information can be requested and used from specific cell locations.   </li>
+							<li>Similarly with API, can request specific data based on parameters like the number of likes for a post via Facebook API </li>
+							<li>Can use parameters to narrow down the results returned in the response. How cool!</ii>
+						</ul>
+					</p>
+
+					<p>Thousands of APIS can use, mash up, and pass it up through other APIS to create awesome stuff like for example using the Google Maps API to display images from Instagram for a set geo-coordinates. </p>
+
+					<p>Authentication
+						<ul>
+							<li>Many of the big online websites use oauth or oauth 2 to authenticate</li>
+							<li>Get credential like a client ID and exchange those for an access token.   Then pass that access token to confirm you are who you are (thus random person cannot use API to send tweets from someone else’s’ account)</li>
+						</ul>
+					</p>
+
+					<b>2. Tools for Entrepreneurs: Introduction to APIs by Google for Entrepreneurs</b>
+					</br></br>
+					<div align="center"><iframe width="500" height="300" src="https://www.youtube.com/embed/FknvOGcLHmc" frameborder="0" allowfullscreen></iframe></div>
+                    <p>An Application is like a machine that does something complicated for us.
+                        <ul>
+                            <li>While it is complex on the inside (or back end), we do not need to fully understand everything inside the machine.  We only care about is that it outputs which solves a problem for us.
+                                <ul>
+                                    <li>For example, Twitter the app is what is doing the hard work of processing and sending out tweets.  The user does not need to fully understand how it processes the information in order to use. </li>
+                                    <li>By app, do not mean the app on phone (there could be many interfaces communicating with it), but the back end machines doing all the hard processing</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                    <p>Interface is how a machine takes input and gives output in a standardized way
+                        <ul>
+                            <li>Twitter application knows how to take input and output a tweet to all your channels (i.e. your followers) and you as the user don’t have to really think about it.  </li>
+                            <li>Twitter has a standardized interface the both computers and programs can understand</li>
+                            <li>Important because APIS let you write applications that use other applications; because of standardization, applications can communicate to one another</li>
+                            <li>Thus clients like vine, tweeties or have a standardized way to talk to twitter’s interface:
+                                <ul>
+                                    <li>That way twitter does not need to worry about who using, just tell this is how you talk to us</li>
+                                    <li>Much more efficient and easy for anyone who wants to implement interface and can use twitter machines in own special way = thus can leverage the power of the TWEET to build amazing things!</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p>How does it work?
+                            <ul>
+                                <li>Usually by URL</li>
+                                <li>Sends off information to a specific web address in a call and that web address is what accepts and can parse/or read this instructions </li>
+                                <li>Divided into:
+                                    <ul>
+                                        <li>Action = tells API what to do </li>
+                                        <li>Parameters = standardized and part of the API. For example, it can be the fields we want to show</li>
+                                        <li>Values = each parameter has a values. Thus the specific information we what we want to pull from parameters</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </p>
+
+                        <p>
+                            <ul>Why is this interesting for developers?
+                                <li>Every website solves a problem, thus what website answers a query that may be interesting for my own site</li>
+                                <li>API lets developer use the problem solving capabilities of these apps in their own apps = thus Google’s power is not just limited to Google i.e. and a developer can use something like Google’s mapping functionality via their API!</li>
+                                <li>Developers can use an existing product in new imaginative ways</li>
+                                <li>Entire Business can be built around an API = i.e. lots of cool applications are built around twitter!  Hootsuite pulls from twitter API business information and provides analytics</li>
+                            </ul>
+                        </p>
+
+                        <p>Why is this interesting for business?
+                            <ul>
+                                <li>Your app will never solves everyone’s problem = thus by using an API, the customer can solve their own problem
+                                    <ul>
+                                        <li>You should focus on your business and what your app solves instead of trying to solve/devote money to s solving every possible customer request</li>
+                                    </ul>
+                                </li>
+                                <li>Internal teams can collaborate without bothering each other = can work and integrate with each other’s work  </li>
+                                <li>Brand New Experiences can be created using your product</li>
+                            </ul>
+
+                        </p>
+
+
+                    </p>
+				</p>
+		</div>
+
+</br>
+</br>
+
+    <div class="submission-form" id="submission-form">
+    <form action="/sign%s" method="post">
+      <h3>Add Notes!  Leave a Comment!<h3>
+
+      <label for="Comment"><b>Comment:</b></label>
+      <br>
+
+      <textarea placeholder="Insert your comment/note" name="content" cols="70" rows="3" required></textarea>
+      <br>
+      <br>
+      <input input type="submit" value="Post Comment">
+    </form>
+
+    <form> Wall:
+      <input value="%s" name="wall_name">
+      <input type="submit" value="Switch">
+    </form>
+      <br>
+    Logged in as: <strong>%s</strong><br>
+    <a href="%s">%s</a>
+  <!-- user comments start here -->
+  %s
+  </div>
+</div>
+
+</br>
+</br>
+
+
+</br>
+</br>
+
+
+
+</body>
+
+</html>
+
+
+
+

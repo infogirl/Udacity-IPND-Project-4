@@ -1,0 +1,99 @@
+
+
+
+h3{
+    text-align:center;
+}
+
+#launch{
+    text-align:center;
+}
+
+.header{
+    text-align:center;
+}
+
+.required{
+    color: red;
+    font-size: 10px;
+}
+
+#navigation{
+float: left;
+width: 20%;
+background-color: #5F6B77;
+border-style: solid;
+border-color: #000026;
+padding: 10px;
+font-size: 20px;
+}
+
+#navigation ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+#navigation li{
+    padding-bottom: 10px;
+}
+
+#navigation a:link{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#navigation a:visited{
+    color: #ff7969;
+    text-decoration: none;
+}
+
+#navigation a:hover{
+    text-decoration: underline;
+}
+
+#content {
+  margin-left: 25%;
+  width: 70%;
+}
+
+.lesson{
+    border-style: solid;
+    border-color: #000000;
+    background-color: #FFFFFF;
+    padding: 20px;
+}
+
+.submission-form{
+    border-color: #000000;
+    background-color: #7E7E7E;
+    border-style: solid;
+    padding: 20px;
+}
+
+#piechart_3d{
+    border-style: solid;
+}
+
+
+body{
+   background-color:#D3D3D3;
+}
+
+.footer{
+  text-align: center;
+}
+
+table {
+    border: 1px solid black;
+    width: 60%;
+    margin-left: 25%;
+    background-color: #FFFFFF;
+}
+
+th {
+      color: teal;
+    }
+
+td {
+      border: 1px solid black;
+    }
