@@ -30,16 +30,19 @@ class Comment(ndb.Model):
   content = ndb.StringProperty(indexed=False)
   date = ndb.DateTimeProperty(auto_now_add=True)
 
-
+#Functions to Handler Class
 class Handler(webapp2.RequestHandler):
 
     def write(self, *a, **kw):
         self.response.out.write(*a, **kw)
-
+#Takes template and parameters and use jinja environment
+#to create file, load file and pass in the paramters and
+#return a string
     def render_str(self, template, **params):
         t = jinja_env.get_template(template)
         return t.render(params)
-
+#Takes the template and parameters
+#and calls render and wraps it in self.write
     def render(self, template, **kw):
         self.write(self.render_str(template, **kw))
 
@@ -48,11 +51,11 @@ class MainPage(Handler):
   def get(self):
     wall_name = self.request.get('wall_name',DEFAULT_WALL)
     if wall_name == DEFAULT_WALL.lower(): wall_name = DEFAULT_WALL
-
+    #Get comments from datastore and put them in order by date
     comments_query = Comment.query(ancestor = wall_key(wall_name)).order(-Comment.date)
     comments =  comments_query.fetch()
 
-    # If a person is logged into Google's Services
+    #If a person is logged into Google's Services
     user = users.get_current_user()
     if user:
         url = users.create_logout_url(self.request.uri)
@@ -61,38 +64,11 @@ class MainPage(Handler):
         url_linktext = 'Login'
         user_name = 'Anonymous Poster'
 
-        template_values = {
-        'user' : user,
-        'comments' : comments,
-        'url' : url,
-        'url_linktext' : url_linktext,
-        }
-        #return template_values
-
-
-    # Create our comments html
-#    comments_html = ''
-#    for comment in comments:
-#        if user and user.user_id() == comment.name.identity:
-#            comments_html += '<div><h3>(You) ' + comment.name.name + '</h3>\n'
-#        else:
-#            comments_html += '<div><h3>' + comment.name.name + '</h3>\n'
-
-#        comments_html += 'wrote: <blockquote>' + cgi.escape(comment.content) + '</blockquote>\n'
-#        comments_html += '</div>\n'
-
     sign_query_params = urllib.urlencode({'wall_name': wall_name})
 
+    #Render the template and variables
     template = jinja_env.get_template('index.html')
     self.render("index.html", comments=comments, users=users)
-
-    # Render our page
-    #rendered_html = template % (sign_query_params, cgi.escape(wall_name), user_name,
-#                                    url, url_linktext, comments_html)
-
-    #self.response.out.write(rendered_html)
-
-
 
 class PostWall(webapp2.RequestHandler):
     def post(self):
@@ -110,12 +86,11 @@ class PostWall(webapp2.RequestHandler):
             comment.name = Name(
                 name='anonymous@anonymous.com',
                 email='anonymous@anonymous.com')
-    # Get the content from our request parameters, in this case, the message
-    # is in the parameter 'content'
+    # Get the content from our request parameters and post/store the comment
         comment.content = self.request.get('content')
         comment.put()
 
-    # Do other things here such as a page redirect
+    #page redirect
         self.redirect('/?wall_name=' + wall_name)
 
 
