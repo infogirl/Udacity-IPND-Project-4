@@ -57,9 +57,7 @@ class MainPage(Handler):
     if user:
         url = users.create_logout_url(self.request.uri)
         url_linktext = 'Logout'
-        user_name = user.nickname()
     else:
-        url = users.create_login_url(self.request.uri)
         url_linktext = 'Login'
         user_name = 'Anonymous Poster'
 
@@ -73,15 +71,15 @@ class MainPage(Handler):
 
 
     # Create our comments html
-    comments_html = ''
-    for comment in comments:
-        if user and user.user_id() == comment.name.identity:
-            comments_html += '<div><h3>(You) ' + comment.name.name + '</h3>\n'
-        else:
-            comments_html += '<div><h3>' + comment.name.name + '</h3>\n'
+#    comments_html = ''
+#    for comment in comments:
+#        if user and user.user_id() == comment.name.identity:
+#            comments_html += '<div><h3>(You) ' + comment.name.name + '</h3>\n'
+#        else:
+#            comments_html += '<div><h3>' + comment.name.name + '</h3>\n'
 
-        comments_html += 'wrote: <blockquote>' + cgi.escape(comment.content) + '</blockquote>\n'
-        comments_html += '</div>\n'
+#        comments_html += 'wrote: <blockquote>' + cgi.escape(comment.content) + '</blockquote>\n'
+#        comments_html += '</div>\n'
 
     sign_query_params = urllib.urlencode({'wall_name': wall_name})
 

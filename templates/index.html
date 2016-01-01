@@ -999,27 +999,24 @@
         {% endfor %}
       {% endif %}
 
-    </br>
   </br>
       <button>Add Comment</button>
 
-    <ul>
+    <table>
       {% for comment in comments %}
-        <li>{{comment.name.name}} said {{comment.content}}</li>
+        <tr>
+          <td>{{comment.name.name}} said {{comment.content}}</td>
+        </tr>
       {% endfor %}
-    <ul>
+    <table>
 
+    </br>
     </form>
 
     <form> Wall:
-      <input placeholder="public" value="%s" name="wall_name">
+      <input placeholder="public" name="wall_name">
       <input type="submit" value="Switch">
-    </form>
-      <br>
-    Logged in as: <strong>{{user}}</strong><br>
-    <a href="/sign">Log In</a>
-  <!-- user comments start here -->
-  {{user}}
+
   </div>
 </div>
 
