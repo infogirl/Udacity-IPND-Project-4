@@ -89,7 +89,7 @@ class MainPage(webapp2.RequestHandler):
 
     rendered_html = template % (template_values, comments_html, sign_query_params, cgi.escape(wall_name))
 
-    self.response.out.write(template)
+    self.response.out.write(rendered_html)
 
 
 class PostWall(webapp2.RequestHandler):
