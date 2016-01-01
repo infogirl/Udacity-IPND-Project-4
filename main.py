@@ -58,7 +58,7 @@ class MainPage(Handler):
     #If a person is logged into Google's Services
     user = users.get_current_user()
     if user:
-        url = users.create_logout_url(self.request.uri)
+        url = self.redirect(users.create_login_url(self.request.uri))
         url_linktext = 'Logout'
     else:
         url_linktext = 'Login'
