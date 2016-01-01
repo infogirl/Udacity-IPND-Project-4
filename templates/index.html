@@ -984,6 +984,7 @@
 </br>
 </br>
 
+
     <div class="submission-form" id="submission-form">
     <form action="/sign" method="post">
       <h3>Add Notes!  Leave a Comment!<h3>
@@ -992,9 +993,22 @@
       <br>
 
       <textarea placeholder="Insert your comment/note" name="content" cols="70" rows="3" required></textarea>
-      <br>
-      <br>
-      <input input type="submit" value="Post Comment">
+      {% if comment %}
+        {% for comment in comments %}
+          <input input type="hidden" name="content" value="{{comment}}">
+        {% endfor %}
+      {% endif %}
+
+    </br>
+  </br>
+      <button>Add Comment</button>
+
+    <ul>
+      {% for comment in comments %}
+        <li>{{ comment }}</li>
+      {% endfor %}
+    <ul>
+
     </form>
 
     <form> Wall:
@@ -1002,10 +1016,10 @@
       <input type="submit" value="Switch">
     </form>
       <br>
-    Logged in as: <strong>%s</strong><br>
-    <a href="%s">Log In</a>
+    Logged in as: <strong>{{user}}</strong><br>
+    <a href="/sign">Log In</a>
   <!-- user comments start here -->
-  %s
+  {{user}}
   </div>
 </div>
 

@@ -44,7 +44,7 @@ class Handler(webapp2.RequestHandler):
         self.write(self.render_str(template, **kw))
 
 
-class MainPage(webapp2.RequestHandler):
+class MainPage(Handler):
   def get(self):
     wall_name = self.request.get('wall_name',DEFAULT_WALL)
     if wall_name == DEFAULT_WALL.lower(): wall_name = DEFAULT_WALL
@@ -69,7 +69,7 @@ class MainPage(webapp2.RequestHandler):
         'url' : url,
         'url_linktext' : url_linktext,
         }
-#        return template_values
+        #return template_values
 
 
     # Create our comments html
@@ -86,10 +86,14 @@ class MainPage(webapp2.RequestHandler):
     sign_query_params = urllib.urlencode({'wall_name': wall_name})
 
     template = jinja_env.get_template('index.html')
+    self.render("index.html", comments=comments, users=users)
 
-    rendered_html = template % (template_values, comments_html, sign_query_params, cgi.escape(wall_name))
+    # Render our page
+    #rendered_html = template % (sign_query_params, cgi.escape(wall_name), user_name,
+#                                    url, url_linktext, comments_html)
 
-    self.response.out.write(rendered_html)
+    #self.response.out.write(rendered_html)
+
 
 
 class PostWall(webapp2.RequestHandler):
