@@ -52,7 +52,6 @@ class MainPage(Handler):
     sign_query_params = urllib.urlencode({'wall_name': wall_name})
 
     #Render the template and variables
-    template = jinja_env.get_template('index.html')
     self.render("index.html", comments=comments, users=users)
 
 class PostWall(webapp2.RequestHandler):
@@ -63,11 +62,11 @@ class PostWall(webapp2.RequestHandler):
         comment.content = self.request.get('content')
         comment.name= self.request.get('user')
 
-        comment.put()
-
-    #page redirect
-        self.redirect('/?wall_name=' + wall_name)
-
+        if len(comment.name)!=0 and len(comment.content)!=0:
+          comment.put()
+          self.redirect('/?wall_name=' + wall_name)
+        else:
+          self.response.out.write("""<h3 style ="color:red">Please Enter a Valid User Name and Comment...</h3>""")
 
 app = webapp2.WSGIApplication(  [
   ('/', MainPage),
