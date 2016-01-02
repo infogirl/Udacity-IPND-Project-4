@@ -19,7 +19,7 @@ def wall_key(wall_name=DEFAULT_WALL):
   return ndb.Key('Wall', wall_name)
 
 class Comment(ndb.Model):
-#The main model for representing an individual post entry."""
+#The main model for representing an individual post entry.
   name = ndb.StringProperty(indexed=True)
   content = ndb.StringProperty(indexed=False)
   date = ndb.DateTimeProperty(auto_now_add=True)
@@ -58,13 +58,13 @@ class PostWall(webapp2.RequestHandler):
     def post(self):
         wall_name = self.request.get('wall_name',DEFAULT_WALL)
         comment = Comment(parent=wall_key(wall_name))
-
+        #get the content and user from the form
         comment.content = self.request.get('content')
         comment.name= self.request.get('user')
-
+        #Validate the input
         if len(comment.name)!=0 and len(comment.content)!=0:
           comment.put()
-          self.redirect('/?wall_name=' + wall_name)
+          self.redirect('/')
         else:
           self.response.out.write("""<h3 style ="color:red">Please Enter a Valid User Name and Comment...</h3>""")
 
