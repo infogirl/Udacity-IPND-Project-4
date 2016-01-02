@@ -56,13 +56,12 @@ class MainPage(Handler):
     comments =  comments_query.fetch()
 
     #If a person is logged into Google's Services
-    user = users.get_current_user()
-    if user:
-        url = self.redirect(users.create_login_url(self.request.uri))
-        url_linktext = 'Logout'
-    else:
-        url_linktext = 'Login'
-        user_name = 'Anonymous Poster'
+    #user = users.get_current_user()
+#    if user:
+#        user_name = comment.name
+#    else:
+#        url_linktext = 'Login'
+#        user_name = 'Anonymous Poster'
 
     sign_query_params = urllib.urlencode({'wall_name': wall_name})
 

@@ -10,13 +10,6 @@ handlers:
 - url: /.*
   script: main.app
 
-indexes:
-- kind: Comment
-  ancestor: yes
-  properties:
-  - name: date
-    direction: desc
-
 libraries:
 - name: webapp2
   version: latest

@@ -982,9 +982,20 @@
     <div class="submission-form" id="submission-form">
     <form action="/sign" method="post">
       <h3>Add Notes!  Leave a Comment!<h3>
-
+      <br>
+      <label for="Name"><b>Name:</b></label>
+      <br>
+      <textarea placeholder="What is your name?" name=user = cols="50" rows="1"></textarea>
+      {% if user %}
+        {% for user in users %}
+        <input input type="hidden" name="user" value="{{user}}"></input>
+        {% endfor %}
+      {% endif %}
+      <br>
       <label for="Comment"><b>Comment:</b></label>
       <br>
+
+
 
       <textarea placeholder="Insert your comment/note" name="content" cols="70" rows="3" required></textarea>
       {% if comment %}
