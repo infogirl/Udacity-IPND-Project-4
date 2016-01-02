@@ -18,15 +18,9 @@ def wall_key(wall_name=DEFAULT_WALL):
 #Constructs a Datastore key for a Wall entity.
   return ndb.Key('Wall', wall_name)
 
-class Name(ndb.Model):
-# Sub model for representing an author of the comment
-  identity = ndb.StringProperty(indexed=True)
-  name = ndb.StringProperty(indexed=False)
-  email = ndb.StringProperty(indexed=False)
-
 class Comment(ndb.Model):
 #The main model for representing an individual post entry."""
-  name = ndb.StructuredProperty(Name)
+  name = ndb.StringProperty(indexed=True)
   content = ndb.StringProperty(indexed=False)
   date = ndb.DateTimeProperty(auto_now_add=True)
 
@@ -55,14 +49,6 @@ class MainPage(Handler):
     comments_query = Comment.query(ancestor = wall_key(wall_name)).order(-Comment.date)
     comments =  comments_query.fetch()
 
-    #If a person is logged into Google's Services
-    #user = users.get_current_user()
-#    if user:
-#        user_name = comment.name
-#    else:
-#        url_linktext = 'Login'
-#        user_name = 'Anonymous Poster'
-
     sign_query_params = urllib.urlencode({'wall_name': wall_name})
 
     #Render the template and variables
@@ -74,19 +60,9 @@ class PostWall(webapp2.RequestHandler):
         wall_name = self.request.get('wall_name',DEFAULT_WALL)
         comment = Comment(parent=wall_key(wall_name))
 
-    # When the person is making the post, check to see whether the person
-    # is logged into Google
-        if users.get_current_user():
-            comment.name = Name(
-                identity=users.get_current_user().user_id(),
-                name=users.get_current_user().nickname(),
-                email=users.get_current_user().email())
-        else:
-            comment.name = Name(
-                name='anonymous@anonymous.com',
-                email='anonymous@anonymous.com')
-    # Get the content from our request parameters and post/store the comment
         comment.content = self.request.get('content')
+        comment.name= self.request.get('user')
+
         comment.put()
 
     #page redirect
