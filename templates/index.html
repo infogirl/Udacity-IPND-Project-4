@@ -1015,9 +1015,10 @@
 
   </br>
       <button>Add Comment</button>
-  <br>
-  <br>
 
+    </form>
+  <br>
+  <br>
     <table>
       {% for comment in comments %}
         <tr>
@@ -1026,8 +1027,7 @@
       {% endfor %}
     <table>
 
-    </form>
-
+    {% block content %}{% endblock %}
   </div>
 </div>
 

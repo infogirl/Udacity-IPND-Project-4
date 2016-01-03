@@ -40,6 +40,9 @@ class Handler(webapp2.RequestHandler):
     def render(self, template, **kw):
         self.write(self.render_str(template, **kw))
 
+class Error(Handler):
+  def get(self):
+    self.render("error.html")
 
 class MainPage(Handler):
   def get(self):
@@ -66,9 +69,10 @@ class PostWall(webapp2.RequestHandler):
           comment.put()
           self.redirect('/')
         else:
-          self.response.out.write("""<h3 style ="color:red">Please Enter a Valid User Name and Comment...</h3>""")
+          self.redirect('/error')
 
 app = webapp2.WSGIApplication(  [
   ('/', MainPage),
   ('/sign', PostWall),
+  ('/error', Error)
 ], debug=True)
